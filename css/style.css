@@ -318,8 +318,9 @@ h2 {
 }
 
 p {
-	margin-top: 4px;
-	margin-bottom: 1.5em;
+	//margin-top: 4px;
+	//margin-bottom: 1.5em;
+	margin: 4px 0 6px;
 }
 
 dfn,
