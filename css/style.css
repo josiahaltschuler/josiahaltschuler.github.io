@@ -853,7 +853,7 @@ p.gigantic {
 
 @media screen and (max-width: 600px) {
 	p.gigantic {
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 1.51429;
 	}
 }
