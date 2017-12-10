@@ -313,7 +313,7 @@ h2 {
 
 @media screen and (max-width: 600px) {
 	h2 {
-		font-size: 22px;
+		font-size: 20px;
 	}
 }
 
@@ -436,7 +436,7 @@ h1.site-title a {
 
 @media screen and (max-width: 600px) {
 	h1.site-title a {
-		font-size: 30px;
+		font-size: 22px;
 	}
 }
 
@@ -853,7 +853,7 @@ p.gigantic {
 
 @media screen and (max-width: 600px) {
 	p.gigantic {
-		font-size: 22px;
+		font-size: 20px;
 		line-height: 1.51429;
 	}
 }
