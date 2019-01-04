@@ -797,9 +797,15 @@ embed, iframe, object {
 }
 
 .home img {
-	width: 625px;
+	width: 50%;
 	float: left;
 	margin: 0 20px 10px 0;
+}
+
+@media screen and (max-width: 600px) {
+	.home img {
+		width: 100%;
+	}
 }
 
 p.gigantic {
