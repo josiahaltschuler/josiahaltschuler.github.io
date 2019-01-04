@@ -30,59 +30,70 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
 html {
 	font-family: "Open Sans", sans-serif;
 	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+	-ms-text-size-adjust: 100%;
 }
 
 body {
 	margin: 0;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-main,
-menu,
-nav,
-section,
-summary {
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
 	display: block;
 }
 
 article::before, article::after {
-    content: "";
-    display: table;
+	content: "";
+	display: table;
 }
 
 article::before, article::after {
-    content: "";
-    display: table;
+	content: "";
+	display: table;
 }
 
 article::after {
-    clear: both;
+	clear: both;
 }
 
 article {
-    margin-bottom: 40px;
+	margin-bottom: 40px;
+}
+
+article:first-of-type {
+	margin-top: 80px;
+}
+
+@media screen and (max-width: 600px) {
+	article:first-of-type {
+		margin-top: 20px;
+	}
+}
+
+article:nth-of-type(2) {
+	margin-top: 60px;
+}
+
+@media screen and (max-width: 600px) {
+	article:nth-of-type(2) {
+		margin-top: 30px;
+	}
+}
+
+article:last-of-type {
+	/* margin-bottom: 100px; */
 }
 
 @media screen and (max-width: 600px) {
 	article {
-	    margin-bottom: 15px;
+		/* margin-bottom: 35px; */
 	}
 }
 
-audio,
-canvas,
-progress,
-video {
+audio, canvas, progress, video {
 	display: inline-block;
 	vertical-align: baseline;
 }
@@ -92,8 +103,7 @@ audio:not([controls]) {
 	height: 0;
 }
 
-[hidden],
-template {
+[hidden], template {
 	display: none;
 }
 
@@ -101,8 +111,7 @@ a {
 	background-color: transparent;
 }
 
-a:active,
-a:hover {
+a:active, a:hover {
 	outline: 0;
 }
 
@@ -110,8 +119,7 @@ abbr[title] {
 	border-bottom: 1px dotted;
 }
 
-b,
-strong {
+b, strong {
 	font-weight: bold;
 }
 
@@ -133,8 +141,7 @@ small {
 	font-size: 80%;
 }
 
-sub,
-sup {
+sub, sup {
 	font-size: 75%;
 	line-height: 0;
 	position: relative;
@@ -170,19 +177,12 @@ pre {
 	overflow: auto;
 }
 
-code,
-kbd,
-pre,
-samp {
+code, kbd, pre, samp {
 	font-family: monospace, monospace;
 	font-size: 1em;
 }
 
-button,
-input,
-optgroup,
-select,
-textarea {
+button, input, optgroup, select, textarea {
 	color: inherit;
 	font: inherit;
 	margin: 0;
@@ -192,26 +192,20 @@ button {
 	overflow: visible;
 }
 
-button,
-select {
+button, select {
 	text-transform: none;
 }
 
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
 	-webkit-appearance: button;
 	cursor: pointer;
 }
 
-button[disabled],
-html input[disabled] {
+button[disabled], html input[disabled] {
 	cursor: default;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
 }
@@ -220,14 +214,12 @@ input {
 	line-height: normal;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
 	box-sizing: border-box;
 	padding: 0;
 }
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
 	height: auto;
 }
 
@@ -236,8 +228,7 @@ input[type="search"] {
 	box-sizing: content-box;
 }
 
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
 
@@ -265,31 +256,22 @@ table {
 	border-spacing: 0;
 }
 
-td,
-th {
+td, th {
 	padding: 0;
 }
 
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
+
+body, button, input, select, textarea {
 	color: #333333;
 	font-size: 14px;
 	line-height: 1.5;
 	font-family: "Open Sans", sans-serif;
 }
 
-h1, h1 a, h1 a:visited,
-h2, h2 a, h2 a:visited,
-h3, h3 a,
-h4, h4 a,
-h5, h5 a,
-h6, h6 a {
+h1, h1 a, h1 a:visited, h2, h2 a, h2 a:visited, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
 	clear: both;
 	font-weight: 300;
 	text-transform: uppercase;
@@ -297,12 +279,7 @@ h6, h6 a {
 	margin-bottom: 0;
 }
 
-h1 a:hover, h1 a:focus,
-h2 a:hover, h2 a:focus,
-h3 a:hover, h3 a:focus,
-h4 a:hover, h4 a:focus,
-h5 a:hover, h5 a:focus,
-h6 a:hover, h6 a:focus {
+h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus {
 	text-decoration: underline;
 	color: #333333;
 }
@@ -313,20 +290,25 @@ h2 {
 
 @media screen and (max-width: 600px) {
 	h2 {
-		font-size: 20px;
+		font-size: 16px;
 	}
 }
 
 p {
-	//margin-top: 4px;
-	//margin-bottom: 1.5em;
+	/* margin-top: 4px;
+	margin-bottom: 1.5em; */
 	margin: 4px 0 6px;
+	line-height: 24px;
 }
 
-dfn,
-cite,
-em,
-i {
+@media screen and (max-width: 600px) {
+	p {
+		line-height: 22px;
+		font-weight: 300;
+	}
+}
+
+dfn, cite, em, i {
 	font-style: italic;
 }
 
@@ -350,23 +332,18 @@ pre {
 	padding: 1.6em;
 }
 
-code,
-kbd,
-tt,
-var {
+code, kbd, tt, var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 15px;
 	font-size: 0.9375rem;
 }
 
-abbr,
-acronym {
+abbr, acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
 
-mark,
-ins {
+mark, ins {
 	background: #fff9c0;
 	text-decoration: none;
 }
@@ -378,13 +355,13 @@ big {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+
 html {
 	box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*, *:before, *:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 	box-sizing: inherit;
 }
 
@@ -409,14 +386,14 @@ body {
 }
 
 .site-header {
-	padding: 20px 0;
-	background-color: #25282d;
+	/* padding: 20px 0; */
+	/* background-color: #25282d; */
 	margin-bottom: 55px;
 }
 
 @media screen and (max-width: 600px) {
-	.site-header  {
-		margin-bottom: 25px;
+	.site-header {
+		margin-bottom: 0;
 	}
 }
 
@@ -424,15 +401,29 @@ h1.site-title {
 	margin: 0;
 }
 
-h1.site-title a {
+h1.site-title a, h1.intro a {
 	font-family: "Montserrat", sans-serif;
 	font-size: 35px;
-	line-height: 1;
+	/* line-height: 1; */
 	color: #de2500;
-    text-decoration: none;
-    transition: all 0.5s ease 0s;
+	text-decoration: none;
+	transition: all 0.5s ease 0s;
 }
 
+h1.intro {
+	font-family: "Montserrat", sans-serif;
+	font-size: 35px;
+}
+
+@media screen and (max-width: 600px) {
+	h1.intro {
+		font-size: 22px;
+	}
+}
+
+.red {
+	color: #de2500;
+}
 
 @media screen and (max-width: 600px) {
 	h1.site-title a {
@@ -444,10 +435,12 @@ h1.site-title a:visited {
 	color: #de2500;
 }
 
-h1.site-title a:hover,
-h1.site-title a:focus,
-h1.site-title a:active {
+h1.site-title a:hover, h1.site-title a:focus, h1.site-title a:active {
 	color: #ff4f24;
+}
+
+h2 {
+	font-family: "Montserrat", sans-serif;
 }
 
 h2.site-description {
@@ -455,9 +448,9 @@ h2.site-description {
 	float: left;
 	clear: none;
 	color: #888888;
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -481,21 +474,20 @@ h1.entry-title, h1.entry-title a {
 	}
 }
 
+footer {
+	padding: 40px 0;
+}
 .site-footer {
 	padding: 20px 0;
 	background: black;
 	color: #888888;
 }
 
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
+blockquote:before, blockquote:after, q:before, q:after {
 	content: "";
 }
 
-blockquote,
-q {
+blockquote, q {
 	quotes: "" "";
 }
 
@@ -506,8 +498,7 @@ hr {
 	margin-bottom: 1.5em;
 }
 
-ul,
-ol {
+ul, ol {
 	margin: 0 0 1.5em 0;
 }
 
@@ -519,8 +510,7 @@ ol {
 	list-style: decimal;
 }
 
-li > ul,
-li > ol {
+li>ul, li>ol {
 	margin-bottom: 0;
 	margin-left: 1.5em;
 }
@@ -534,8 +524,10 @@ dd {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
 }
 
 table {
@@ -546,10 +538,8 @@ table {
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
 	border: 1px solid;
 	border-color: #ccc #ccc #bbb;
 	border-radius: 3px;
@@ -563,51 +553,27 @@ input[type="submit"] {
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
+button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
 	border-color: #ccc #bbb #aaa;
 	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
+button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, button:active, input[type="button"]:active, input[type="reset"]:active, input[type="submit"]:active {
 	border-color: #aaa #bbb #bbb;
 	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-textarea {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea {
 	color: #666;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="url"]:focus,
-input[type="password"]:focus,
-input[type="search"]:focus,
-textarea:focus {
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
 	color: #111;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"] {
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"] {
 	padding: 3px;
 }
 
@@ -619,23 +585,23 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
+
 a {
 	color: #de2500;
-    text-decoration: none;
-    transition: all 0.5s ease 0s;
-    word-wrap: break-word;
+	text-decoration: none;
+	transition: all 0.5s ease 0s;
+	word-wrap: break-word;
 }
 
 a:visited {
 	color: #de2500;
 }
 
-a:hover,
-a:focus,
-a:active {
+a:hover, a:focus, a:active {
 	color: #ff4f24;
 }
 
@@ -643,17 +609,31 @@ a:focus {
 	outline: thin dotted;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
 	outline: 0;
 }
 
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
+
 .main-navigation {
 	float: right;
 	padding-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.main-navigation {
+		padding-top: 1px;
+		float: none;
+		clear: both;
+	}
+	.main-navigation a i {
+		font-size: 1.8em;
+	}
+	.site-header {
+		padding: 10px 0;
+	}
 }
 
 .main-navigation ul {
@@ -683,16 +663,16 @@ a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-	color: #888;
-    font-family: "Montserrat",sans-serif;
-    font-size: 12px;
-    letter-spacing: 1px;
-    transition: all 0.5s ease 0s;
-    text-transform: uppercase;
+	color: #de2500;
+	font-family: "Montserrat", sans-serif;
+	font-size: 12px;
+	letter-spacing: 1px;
+	transition: all 0.5s ease 0s;
+	text-transform: uppercase;
 }
 
 .main-navigation a:hover {
-	color: #ffffff;
+	color: #888;
 }
 
 .main-navigation ul ul {
@@ -713,36 +693,30 @@ a:active {
 	width: 200px;
 }
 
-.main-navigation ul ul li {
+.main-navigation ul ul li {}
 
-}
+.main-navigation li:hover>a {}
 
-.main-navigation li:hover > a {
-}
+.main-navigation ul ul :hover>a {}
 
-.main-navigation ul ul :hover > a {
-}
+.main-navigation ul ul a:hover {}
 
-.main-navigation ul ul a:hover {
-}
-
-.main-navigation ul li:hover > ul {
+.main-navigation ul li:hover>ul {
 	left: auto;
 }
 
-.main-navigation ul ul li:hover > ul {
+.main-navigation ul ul li:hover>ul {
 	left: 100%;
 }
 
-.main-navigation .current_page_item > a,
-.main-navigation .current-menu-item > a,
-.main-navigation .current_page_ancestor > a {
-}
+.main-navigation .current_page_item>a, .main-navigation .current-menu-item>a, .main-navigation .current_page_ancestor>a {}
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers. */
+
 .screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	position: absolute !important;
@@ -751,9 +725,7 @@ a:active {
 	overflow: hidden;
 }
 
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
@@ -770,12 +742,14 @@ a:active {
 	text-decoration: none;
 	top: 5px;
 	width: auto;
-	z-index: 100000; /* Above WP toolbar. */
+	z-index: 100000;
+	/* Above WP toolbar. */
 }
 
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
+
 .alignleft {
 	display: inline;
 	float: left;
@@ -798,28 +772,13 @@ a:active {
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
+
+.clear:before, .clear:after, .entry-content:before, .entry-content:after, .comment-content:before, .comment-content:after, .site-header:before, .site-header:after, .site-content:before, .site-content:after, .site-footer:before, .site-footer:after {
 	content: "";
 	display: table;
 }
 
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
+.clear:after, .entry-content:after, .comment-content:after, .site-header:after, .site-content:after, .site-footer:after {
 	clear: both;
 }
 
@@ -827,14 +786,13 @@ a:active {
 # Content
 --------------------------------------------------------------*/
 
-
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
+
 /* Make sure embeds and iframes fit their containers. */
-embed,
-iframe,
-object {
+
+embed, iframe, object {
 	max-width: 100%;
 }
 
@@ -845,16 +803,15 @@ object {
 }
 
 p.gigantic {
-	margin-bottom: 0;
-	font-size: 32px;
-	font-weight: 300;
-	line-height: 1.71429;
+	margin: 0.67em 0 0;
+	font-size: 18px;
+	font-weight: 400;
+	/* line-height: 1.71429; */
 }
 
 @media screen and (max-width: 600px) {
 	p.gigantic {
-		font-size: 16px;
-		line-height: 1.51429;
+		width: 100%;
 	}
 }
 
